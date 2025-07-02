@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookMate – Your Reading Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img id="header-logo" src="assets/favicon.png" alt="">
+        <h1>BookMate</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar left">
+            <h2>Recent Searches</h2>
+            <ul id="recent-searches"></ul>
+        </aside>
+        <main class="main-content">
+            <div class="center-box">
+                <h2 class="subtitle">BookMate – Your Reading Companion</h2>
+                <div class="search-bar">
+                    <input type="text" id="book-input" placeholder="Enter book name...">
+                    <button onclick="searchBook()">Search</button>
+                </div>
+                <div class="summary-box" id="summary-box">
+                    <h3>Book Book</h3>
+                    <img id="book-cover" style="max-width: 200px; margin-top: 1em; display: none;" />
+                    <p id="summary">Search a book to get its Info here.</p>
+                    <div class="action-buttons">
+                        <button title="download free book from google" class="download-btn" onclick="openGoogle()">Download</button>
+                        <button title="watch summary from youtube" class="yt-btn" onclick="openYouTube('summary')">Summary</button>
+                        <button title="listen audiobook from youtube" class="yt-btn" onclick="openYouTube('audiobook')">Audiobook</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside class="sidebar right">
+            <h2>Recommendations</h2>
+            <ul id="recommendations"></ul>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
